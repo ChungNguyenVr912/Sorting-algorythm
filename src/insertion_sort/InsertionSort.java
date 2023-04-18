@@ -7,12 +7,12 @@ public class InsertionSort {
     public static void insertionSort(ArrayList<Integer> array) {
         for (int i = 1; i < array.size(); i++) {
             int j = i;
-            while (j > 0 && array.get(j) < array.get(j - 1)) {
-                Integer temp = array.get(j - 1);
-                array.set(j - 1, array.get(j));
-                array.set(j, temp);
+            Integer temp = array.get(i);
+            while (j > 0 && temp < array.get(j - 1)) {
+                array.set(j, array.get(j - 1));
                 j--;
             }
+            array.set(j,temp);
         }
     }
 
